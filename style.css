@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+table {
+  border-collapse:collapse;
+	border-spacing: 0;
+}
+ul,li,p,span {
+	margin:0;
+	padding:0;	
+}
+
+body{background:#B1723C;}
+
+#chessboard {position:relative;margin:5px auto;width:621px;height:621px;border:1px solid #000;background:#F0C287;}
+
+#chessboard .bg{ border:1px solid #3c271b; border-bottom:none; border-right:none; position:absolute; left:30px; top:30px;}
+#chessboard .bg td{ height:40px; width:39px;border:1px solid #3c271b; border-left:none; border-top:none;float:left;}
+
+#chessboard .box{ position:absolute; left:10px; top:10px;z-index:1000;}
+#chessboard .box ul{height:40px;}
+#chessboard .box ul li{position:relative;float:left;height:40px;width:40px;cursor:pointer;text-align:center;}
+#chessboard .box ul li img{vertical-align:middle;}
+
+p.focus {position:relative; width:40px; height:40px; z-index:-100;}
+p.focus .chessbox{position:absolute;height:5px; width:5px; border:1px solid #f00; }
+p.focus .lt{ border-right:none; border-bottom:none; left:0px; top:0px;}
+p.focus .rt{ border-left:none; border-bottom:none; right:0px; top:0px;}
+p.focus .ld{ border-right:none; border-top:none; left:0px; bottom:0px;}
+p.focus .rd{ border-left:none; border-top:none; right:0px; bottom:0px;}
